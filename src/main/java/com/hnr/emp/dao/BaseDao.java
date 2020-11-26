@@ -13,19 +13,26 @@ import java.util.List;
  * @author macbook
  */
 public class BaseDao<T> {
-
+    
     List<T> list = new ArrayList<>();
-
+    
     protected BaseDao() {
-
+        
     }
-
+    
     public void generate(List<T> list) {
         this.list = list;
     }
-
+    
     public List<T> getAll() {
         return list;
     }
-
+    
+    public void add(T t) throws Exception {
+        list.add(t);
+    }
+    
+    public void remove(T t) throws Exception {
+        list.remove(t);
+    }
 }
